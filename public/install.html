@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Install - TitanFX</title>
+
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120-precomposed.png">
+    <meta name="theme-color" content="#60a137">
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link href="/css/main.css" rel="stylesheet"/>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            /* text-align: center; */
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+        .content {
+            align-self: center;
+        }
+        h1 {
+            font-weight: 100;
+        }
+        .plug {
+            width: 100%;
+            max-width: 830px;
+            margin: 10px 0 30px;
+        }
+        .note {
+            margin: 0 40px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #999;
+        }
+        .pwa-content {
+            font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .pwa-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .pwa-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .pwa-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .pwa-content li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .prompt--hidden,
+      .instructions--hidden {
+        display: none;
+      }
+      .install-prompt {
+        font-size: 14px;
+        background: rgba(255,255,255,0.6);
+        padding: 15px 15px;
+      }
+      .install-prompt__button {
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .install-prompt__button--skip {
+        color: #60a137;
+      }
+      .install-prompt__button--skip:hover {
+        color: #478d1c;
+      }
+      .install-prompt__button--install {
+        background-color: #60a137;
+        color: #fff !important;
+      }
+      .install-prompt__button--install:hover {
+        background-color: #478d1c;
+        color: #fff;
+      }
+      .ios-modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+      }
+      .ios-modal__content {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 4px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+        overflow: auto;
+        padding-top: 2rem;
+      }
+      .instructions-image {
+        max-width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 1024px) {
+        .ios-modal__content {
+            max-height: 80vh;
+        }
+        .instructions-image {
+            max-height: 60vh;
+        }
+      }
+      .ios-modal__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem;
+      }
+      .ios-modal__close:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .install-cta-btn {
+          background-color: #72bd43;
+          border: none;
+          border-radius: 4px;
+          color: white;
+          cursor: pointer;
+          display: inline-block;
+          font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+          font-size: 1.2rem;
+          font-weight: bold;
+          padding: 12px 24px;
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s;
+      }
+      .install-cta-btn:hover {
+          background-color: #5aa22e;
+      }
+    </style>
+</head>
+<body>
+    <img src="/img/logo.png" alt="" class="logo" />
+    <div class="content">
+      <div class="pwa-content">
+          <h2>Get the most out of TitanFX!</h2>
+          <p>
+              Install our app to enjoy a seamless and convenient experience with all the features you love. By installing the app, you'll get:
+          </p>
+          <ul>
+              <li>Instant access from your home screen</li>
+              <li>Fast load times and offline access</li>
+              <li>Automatic updates with the latest features</li>
+              <li>Push notifications to stay informed</li>
+          </ul>
+          <p>
+              Don't miss out on the benefits of our app. Click the "Install" button below and follow the instructions to add TitanFX to your device's home screen.
+          </p>
+          <div class="install-prompt prompt--hidden">
+            <button class="install-cta-btn install-prompt__button install-prompt__button--install">Install</button>
+          </div>
+      </div>
+    </div>
+   
+    <div id="iosInstructions" class="instructions--hidden">
+      <div class="ios-modal">
+          <div class="ios-modal__content">
+              <span class="ios-modal__close">&times;</span>
+              <h4>Just a few steps to add our app to your home screen:</h4>
+              <img class="instructions-image" src="/img/ios-instructions.gif" alt="Instructions to add PWA to Home Screen on iOS">
+          </div>
+      </div>
+    </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("sw.js")
+                    .then((registration) => {
+                        console.log("Service Worker registered: ", registration);
+                    })
+                    .catch((registrationError) => {
+                        console.error("Service Worker registration failed: ", registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

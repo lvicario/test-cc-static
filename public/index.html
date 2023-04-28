@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="msapplication-config" content="/browserconfig.xml">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" type="image/png" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120-precomposed.png">
+        <meta name="theme-color" content="#60a137">
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/main.js"></script>
+        <link href="/css/main.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Hello world!</h1>
+        <h2>Tip: Check your console</h2>
+
+        <div class="install-prompt prompt--hidden">
+            <p srty>Get our app for a faster, smoother experience. Install now!</p>
+            <a class="install-prompt__button install-prompt__button--skip">Not now</a>
+            <a class="install-prompt__button install-prompt__button--install">Install</a>
+        </div>
+
+        <div id="iosInstructions" class="instructions--hidden">
+            <div class="ios-modal">
+                <div class="ios-modal__content">
+                    <span class="ios-modal__close">&times;</span>
+                    <h4>Just a few steps to add our app to your home screen:</h4>
+                    <img class="instructions-image" src="/img/ios-instructions.gif" alt="Instructions to add PWA to Home Screen on iOS">
+                </div>
+            </div>
+          </div>
+    </body>
+    
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker
+                    .register("sw.js")
+                    .then((registration) => {
+                        console.log("Service Worker registered: ", registration);
+                    })
+                    .catch((registrationError) => {
+                        console.error("Service Worker registration failed: ", registrationError);
+                    });
+            });
+        }
+    </script>
+</html>

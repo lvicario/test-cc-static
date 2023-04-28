@@ -1,0 +1,333 @@
+:root {
+	--body-background: #fafafa;
+	  --brand-primary: #72bd43;
+	  --brand-primary-dark: #60a137;
+	  --brand-secondary: #232323;
+	  --brand-secondary-dark: #232323;
+	  --button-primary: #72bd43;
+	  --button-primary-dark: #60a137;
+	  --button-success: #72bd43;
+	  --button-success-dark: #60a137;
+	  --button-success-font: #fff;
+	  --button-danger: #dc3445;
+	  --button-danger-dark: #BB2D3B;
+	  --sidebar-background: linear-gradient(
+		  180deg,
+		  #518232 3.94%,
+		  #518232 52.94%,
+		  #64a53b 100%
+	  );
+	--sidebar-text: #fff;
+	  --sidebar-active: #3c5a2f;
+	--sidebar-active-text: #ffffff;
+	--sidebar-hover-text: #e0e0e0;
+	--sidebar-logo-text: #ffffff;
+	  --sidebar-logo-background: #232323;
+	  --sidebar-badge: #232323;
+	  --top-bar-background: #232323;
+	--top-bar-alt-text: #ffffff;
+	--top-bar-drop-text: #ffffff;
+	  --top-bar-hover: #2d2d2d;
+	--top-bar-hover-text: #ffffff;
+	  --top-bar-font: #8F8F8F;
+	--top-bar-profile-hover: #232323;
+	--top-bar-profile-hover-text: var(--brand-primary);
+	  --top-bar-z-index: 22;
+	  --font-dark: #232323;
+	  --form-label: #72bd43;
+	  --form-field-focus: #72bd43;
+	--box-shadow: rgba(114,189,67, 0.2);
+	--button-box-shadow: 0 0 0 0.2rem rgb(93 186 38 / 50%);
+	--button-primary-outline: var(--button-primary);
+  }
+  
+
+.main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.inner-main {
+	background-color: white;
+	padding: 5%;
+	text-align: center;
+	font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+}
+.inner-main a {
+	color: var(--form-label);
+}
+
+.inner-main a:hover {
+	color: var(--form-label-dark);
+}
+.radio-box {
+	position: relative;
+}
+.checkbox {
+	border-radius: 3px;
+	background: #cbd3da;
+	color: #2e2c38;
+}
+.radio-input {
+	position: absolute;
+	left: 3px;
+	top: 0px;
+	outline: none !important;
+}
+.checkbox.active {
+	background: var(--brand-primary);
+	color: white;
+}
+.checkbox label,
+.radio label {
+	padding-left: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+.input-lg:focus,
+.input-lg-select:focus {
+	outline: none !important;
+	border: 1px solid var(--form-field-focus) !important;
+	box-shadow: 0 0 1px var(--form-field-focus) !important;
+}
+.input-lg {
+	border-radius: 2px !important;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.input-lg-select {
+	border-radius: 2px !important;
+	padding-top: 16px;
+	padding-bottom: 0px;
+	height: 52px;
+}
+.form-group {
+	text-align: left;
+	position: relative;
+}
+.form-group small {
+	color: var(--form-label);
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+.input-lg,
+.input-lg-select {
+	font-size: 15px;
+}
+#showpass {
+	position: absolute;
+	right: 0;
+	padding: 16px;
+	cursor: pointer;
+	border-left: 1px solid silver;
+	top: 1px;
+	color: var(--form-field-focus);
+	font-size: 13px;
+	text-align: center;
+}
+.pass-rules div {
+	padding: 3px;
+	color: #7d7c7c;
+}
+input[type="submit"] {
+	background: var(--button-success);
+	border: 0.8px solid var(--button-success);
+	box-sizing: border-box;
+	border-radius: 1.6px;
+	color: var(--button-success-font);
+	font-size: 15px;
+	letter-spacing: 1px;
+	padding: 15px;
+	min-width: 180px;
+}
+input[type="submit"]:hover {
+	background: var(--button-success-dark);
+	border: 0.8px solid var(--button-success-dark);
+	transition: all 0.15s cubic-bezier(0.3, 0.73, 0.3, 0.74);
+}
+.agree-label {
+	background-color: #ff6060;
+	color: white !important;
+}
+#fp-link,
+#fp-link2 {
+	cursor: pointer;
+}
+
+.lang-drop {
+  display: none;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.lang-drop div {
+	cursor: pointer;
+}
+
+.lang-drop div:hover {
+	background-color: #e6e7e7;
+}
+
+.language-switcher {
+	margin-top: -16px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.lang_select {
+	padding: 4px 8px 4px 8px;
+  border: 1px solid #bdbdbd52;
+  width: auto;
+  border-radius: 0px;
+  white-space: nowrap;
+}
+
+.language-switcher a {
+	cursor: pointer;
+  border: 1px solid #bdbdbd;
+  border-radius: 2px;
+  padding: 5px 0px 5px 0px;
+}
+
+.language-switcher > div {
+  position: absolute;
+    right: 0;
+    top: 32px;
+    z-index: 100;
+}
+
+.maintenance {
+	background-color: white;
+	min-height: 80px;
+	width: 100%;
+	border-bottom: 3px solid #71be44;
+	text-align: center;
+	padding-top: 6px;
+	margin-bottom: -70px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.bann_msg {
+	background-color: #fff069;
+	min-height: 15px;
+	width: 100%;
+	border-bottom: 3px solid #71be44;
+	text-align: center;
+	margin-bottom: -70px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	position: fixed;
+	z-index: 1000;
+}
+
+.input-lg {
+	padding-top: 30px !important;
+	height: 55px !important;
+}
+
+.input-lg-select {
+	height: 55px !important;
+}
+
+
+.padding-top-sm {
+	padding-top: 10px;
+  }
+
+
+.prompt--hidden,
+.instructions--hidden {
+  display: none;
+}
+
+.install-prompt {
+  font-size: 14px;
+  background: rgba(255,255,255,0.6);
+  padding: 15px 15px;
+}
+
+.install-prompt__button {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.install-prompt__button--skip {
+  color: #60a137;
+}
+
+.install-prompt__button--skip:hover {
+  color: #478d1c;
+}
+
+.install-prompt__button--install {
+  background-color: #60a137;
+  color: #fff !important;
+}
+
+.install-prompt__button--install:hover {
+  background-color: #478d1c;
+  color: #fff;
+}
+
+.ios-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.ios-modal__content {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  overflow: auto;
+  padding-top: 2rem;
+}
+
+.instructions-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .ios-modal__content {
+      max-height: 80vh;
+  }
+
+  .instructions-image {
+      max-height: 60vh;
+  }
+}
+
+
+.ios-modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+.ios-modal__close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

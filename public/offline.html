@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - TitanFX</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+        }
+
+        .content {
+            align-self: center;
+        }
+
+        h1 {
+            font-weight: 100;
+        }
+
+        .plug {
+            width: 100%;
+            max-width: 830px;
+            margin: 10px 0 30px;
+        }
+
+        .note {
+            margin: 0 40px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <img src="/assets/titanfx/imgs/logo.png" alt="" class="logo" />
+    <div class="content">
+        <h1>You're offline</h1>
+        <img src="/assets/imgs/plug-disconnected.png" alt="" class="plug" />
+        <p class="note">"Oops! It looks like you're currently offline. Please connect to the internet to continue using this app.</p>
+    </div>
+</body>
+</html>
